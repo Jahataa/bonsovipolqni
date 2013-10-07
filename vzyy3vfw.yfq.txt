@@ -1,0 +1,6 @@
+﻿[user]
+	name = bladespinner
+	email = bladespinner@gmail.com
+[core]
+	autocrlf = false
+
