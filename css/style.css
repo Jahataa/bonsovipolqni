@@ -1,23 +1,31 @@
 ﻿* {
     padding:0; margin: 0 0 5px;
 }
-body {  border: none; background:#494949 ;  }
+body {  
+    border: none; 
+    background:#494949 ;  
+}
 a { color: #0000A0; }
 a:hover { color: #2A7FFF; }
 /**главен див **/
 .mastar {
-    border:none ; background:#494949; width:1366px; height:1000px ; margin:auto;
-     padding: 15px; 
+    border:none ; 
+    background:#494949; 
+    width:1366px; 
+    height:1000px; 
+    margin:auto;
+    padding: 15px; 
 }
 /** централен див за писане **/
 .content { 
     width:850px ;
-    height:570px  ;
+    height:750px  ;
     margin:auto;
     float: left;
     transition:all 0.5s;
     margin-left: 258px;
     font-family: 'Garamond',sans-serif,;
+    overflow:auto;
 }
 /** лого **/
 .logo {
@@ -58,18 +66,12 @@ font-size: 25px;
 #nav-menu li
 {
 float: none;
-margin: 0 0.15em;
+margin-bottom:11px;
 margin-left: 30px;
 }
 #nav-menu li a
 {
-background: url(background.gif) #494949 bottom left repeat-x;
-height: 2em;
-line-height: 2em;
-float: left;
-width: 9em;
-display: block;
-border: 0.1em solid #494949;
+
 color: #fff;
 text-decoration: none;
 text-align: left;
@@ -97,11 +99,6 @@ span {
     margin-bottom: 25px;
 }
 /* галерия */
-table th{
-    color:#fff;
-    font-size: 24px;
-    text-align:center;
-}
 td a img{
     border: 3px solid #fff ;
     color:#fff;
@@ -110,4 +107,90 @@ td a img{
 }
 td a:hover img {
     border:3px solid #70b8ff;
+}
+th h1 {
+    color:#fff;
+    font-size: 24px;
+    text-align:center;
+}
+/* background:#494949;
+height: 2em;
+line-height: 2em;
+float: left;
+width: 9em;
+display: block;
+border: 0.1em solid #494949;
+*/
+
+/* Turn on a 13x13 scrollbar */
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+    background-color:#494949;
+}
+ 
+::-webkit-scrollbar-button:vertical {
+    background-color: red;
+    border: 1px dashed blue;
+}
+ 
+/* Turn on single button up on top, and down on bottom */
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+ 
+/* Turn off the down area up on top, and up area on bottom */
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+ 
+/* Place The scroll down button at the bottom */
+::-webkit-scrollbar-button:vertical:increment {
+    background-color: #494949;
+    border: none;
+}
+ 
+/* Place The scroll up button at the up */
+::-webkit-scrollbar-button:vertical:decrement {
+    background-color: #494949;
+    border: none;
+}
+ 
+::-webkit-scrollbar-track:vertical {
+    background-color: #494949;
+    border:none;
+}
+ 
+/* Top area above thumb and below up button */
+::-webkit-scrollbar-track-piece:vertical:start {
+    border: 1px solid yellowgreen;
+}
+ 
+/* Bottom area below thumb and down button */
+::-webkit-scrollbar-track-piece:vertical:end {
+    border: 1px solid yellowgreen;
+    
+}
+ 
+/* Track below and above */
+::-webkit-scrollbar-track-piece {
+    background-color:#494949;
+}
+ 
+/* The thumb itself */
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color:rgba(255, 255, 255, 0.09);
+}
+ 
+/* Corner */
+::-webkit-scrollbar-corner:vertical {
+    background-color: green;
+}
+ 
+/* Resizer */
+::-webkit-scrollbar-resizer:vertical {
+    background-color: gray;
 }
