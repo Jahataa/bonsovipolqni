@@ -5,6 +5,12 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico"/>
     <link rel="stylesheet" href="css/lightbox.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <?php
+        if(isset($headContent))
+        {
+            print($headContent);
+        }
+    ?>
     <title>Хижа Бонсови поляни</title>
 </head>
 
