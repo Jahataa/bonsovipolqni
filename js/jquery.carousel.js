@@ -7,6 +7,7 @@
       sliderClass : "slider"
     } 
     this.each(function() {
+      var carousel = this;
       var isSliding = false;
       var $this = $(this);
       var slideContainer = $this.children().first();
@@ -14,20 +15,7 @@
       var currentSlide = 0;
       var transitionEndEvents = "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd";
 
-      /*slides.slice(1).each(function(){
-        $(this).css("left","100%");
-      });*/
-
       slides.first().css("left","0%");
-
-      slides.each(function(){
-        $(this).css("transition","all 1s");
-        $(this).css("transition-timing-function","linear");
-      });
-
-      slides.each(function(){
-        $(this).stop();
-      })
 
       var innerSlideCounter = 0;
       controls.sliders.currentlyMarked = 0;
@@ -37,17 +25,19 @@
         $(controls.sliders[slide]).addClass(defaultOptions.sliderHighlighClass);
         controls.sliders.currentlyMarked = slide;
       }
+
       controls.sliders.each(function(){
         var counter = innerSlideCounter;
         $(this).click(function(){
-          $this.slideTo(counter);
+          carousel.slideTo(counter);
         });
         innerSlideCounter++;
       });
 
-      $this.slideLeft = function() {
+      carousel.slideLeft = function(noAsignSliding) {
+        if(isSliding) return;
         if(currentSlide == slides.length - 1) return false;
-        isSliding = true;
+        if(!noAsignSliding)isSliding = true;
         $(slides[currentSlide]).css("left","-100%");
         currentSlide++;
         $(slides[currentSlide]).css("left","0%");
@@ -55,8 +45,10 @@
         return true;
       }
 
-      $this.slideRight = function() {
+      carousel.slideRight = function(noAsignSliding) {
+        if(isSliding) return;
         if(currentSlide == 0) return false;
+        if(!noAsignSliding)isSliding = true;
         $(slides[currentSlide]).css("left","100%");
         currentSlide--;
         $(slides[currentSlide]).css("left","0%");
@@ -64,18 +56,23 @@
         return true;
       }
 
-      $this.slideTo = function(slide) {
+      $(slideContainer).bind(transitionEndEvents,function() {
+        isSliding = false;
+      });
+
+      carousel.slideTo = function(slide) {
+        if(isSliding)return;
         if(slide < 0) return;
         if(slide > slides.length - 1) return;
         var slideCount = currentSlide - slide;
         var slider;
         if(slideCount < 0) slider = function(){
-          var result = $this.slideLeft();
+          var result = carousel.slideLeft(true);
           slideCount++;
           return result;
         }
         else slider = function() {
-          var result = $this.slideRight();
+          var result = carousel.slideRight(true);
           slideCount--;
           return result;
         }
@@ -100,11 +97,11 @@
       }
 
       controls.right.click(function(){
-        $this.slideLeft();
+        carousel.slideLeft();
       });
 
       controls.left.click(function(){
-        $this.slideRight();
+        carousel.slideRight();
       });
 
     });

@@ -3,10 +3,15 @@
     <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="jquery.carousel.js"></script>
     <style>
+      body
+      {
+        font-size: 14px;
+        font-family: "Verdana";
+      }
       #carousel
       {
         width: 100%;
-        height: 250px;
+        height: 580px;
         overflow: hidden;
         position: relative;
       }
@@ -14,10 +19,12 @@
       {
         position: absolute;
         width: 100%;
-        height: 250px;
-        background: red;
+        height: 100%;
+        background-color:#DFDFDF;
         text-align: center;
         left:100%;
+        transition:all 250ms;
+        transition-timing-function:ease-in-out;
       }
       #slides .slide:first-child
       {
@@ -27,71 +34,84 @@
       {
         position: absolute;
         left:15px;
-        top:70%;
+        top:30%;
         border-top:5px solid transparent;
         border-bottom: 5px solid transparent;
-        border-right: 25px solid white;
+        border-right: 25px solid black;
         transition:all 0.5s;
       }
       #leftArrow:hover
       {
         border-right: 25px solid #a0a0a0;
       }
-      #leftArrow.disabled
-      {
-        border-right: 25px solid gray;
-      }
       #rightArrow
       {
         position: absolute;
         right:15px;
-        top:70%;
+        top:30%;
         border-top:5px solid transparent;
         border-bottom: 5px solid transparent;
-        border-left: 25px solid white;
+        border-left: 25px solid black;
       }
       #rightArrow:hover
       {
         border-left: 25px solid #a0a0a0;
       }
-      #rightArrow.disabled
-      {
-        border-right: 15px solid gray;
-      }
       .sliderContainer
       {
+        background-color: rgba(50,50,50,0.5);
+        border:1px dotted rgba(255,255,255,0.5);
         position: absolute;
-        bottom: 15px;
+        bottom: 25px;
         width: 100%;
-        height: 16px; 
+        height: 14px;
+
         text-align: center;
       }
       .slider
       {
+        margin-top: -2px;
         display: inline-block;
         width: 16px;
         height: 16px;
-        background-color: green;
-        border:1px solid black;
+        background-color: rgba(121,151,189,0.7);
+        border:1px solid white;
         box-shadow: 0px 0px 5px black;
-        border-radius: 100%;
+        transition:all 1s;
       }
-      .selected
+      .slider.selected
       {
-        background-color: blue;
+        background-color: rgba(255,255,255,0.8);
+      }
+      .slider:hover
+      {
+        background-color: rgba(51,81,119,0.7);
+      }
+      .slider.selected:hover
+      {
+        background-color: rgba(255,255,255,0.8);
       }
       .slide img
       {
         width: 100%;
-        height: 100%;
+        height: 250px;
       }
       .slide div
       {
+        padding:5px;
+        margin: 25px;
+        text-align: left;
         background: white;
+        border-radius: 15px;
+        box-shadow: 0px 0px 5px white;
+      }
+      .slide div.title
+      {
+        padding-top: 0px;
+        margin: 0px;
         position: absolute;
         left:50px;
         top:20px;
-        padding: 5px;
       }
     </style>
   </head>
@@ -102,71 +122,114 @@
     <div id="carousel">
       <div id="slides">
         <div class="slide">
-          <div>
+          <div class="title">
             <h2>slide1</h2>
             This is a slide from the carousel lol !
           </div>
           <img src="http://riceoheart.com/images/slider/slider-image-01.jpg">
+          <div>
+            <h3>Hello</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquam augue. Etiam consectetur lorem a euismod imperdiet. Maecenas molestie, nulla commodo lacinia placerat, ipsum metus mollis orci, ac commodo magna magna at quam. Curabitur tempus nisi convallis pharetra tincidunt. Nullam cursus ipsum ante. Phasellus condimentum est eu congue bibendum. Maecenas dictum leo elit, vitae tincidunt risus vehicula sit amet. In elementum est et tempus dignissim.
+            <h3>Goodbye</h3>
+            Nulla in dolor sit amet lorem volutpat pretium. Integer quis tempus sem, nec malesuada lacus. In tristique ac leo eget euismod. Maecenas dapibus magna et nisl tincidunt condimentum. Duis vehicula ornare tincidunt. Suspendisse potenti. Quisque eu viverra orci. Phasellus tempor ultricies nisi vitae volutpat. Praesent ullamcorper eu magna in tempus. In sit amet pulvinar nunc. Fusce facilisis lacus massa, quis sollicitudin libero aliquam eu. Donec auctor consequat nisi.
+          </div>
         </div>
         <div class="slide">
-          <div>
+          <div class="title">
             <h2>slide2</h2>
             This is a slide from the carousel lol !
           </div>
           <img src="http://riceoheart.com/images/slider/slider-image-03.jpg">
+          <div>
+            <h3>Hello</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquam augue. Etiam consectetur lorem a euismod imperdiet. Maecenas molestie, nulla commodo lacinia placerat, ipsum metus mollis orci, ac commodo magna magna at quam. Curabitur tempus nisi convallis pharetra tincidunt. Nullam cursus ipsum ante. Phasellus condimentum est eu congue bibendum. Maecenas dictum leo elit, vitae tincidunt risus vehicula sit amet. In elementum est et tempus dignissim.
+            <h3>Goodbye</h3>
+            Nulla in dolor sit amet lorem volutpat pretium. Integer quis tempus sem, nec malesuada lacus. In tristique ac leo eget euismod. Maecenas dapibus magna et nisl tincidunt condimentum. Duis vehicula ornare tincidunt. Suspendisse potenti. Quisque eu viverra orci. Phasellus tempor ultricies nisi vitae volutpat. Praesent ullamcorper eu magna in tempus. In sit amet pulvinar nunc. Fusce facilisis lacus massa, quis sollicitudin libero aliquam eu. Donec auctor consequat nisi.
+          </div>
         </div>
         <div class="slide">
-          <div>
+          <div class="title">
             <h2>slide3</h2>
             This is a slide from the carousel lol !
           </div>
           <img src="http://riceoheart.com/images/slider/slider-image-02.jpg">
+          <div>
+            <h3>Hello</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquam augue. Etiam consectetur lorem a euismod imperdiet. Maecenas molestie, nulla commodo lacinia placerat, ipsum metus mollis orci, ac commodo magna magna at quam. Curabitur tempus nisi convallis pharetra tincidunt. Nullam cursus ipsum ante. Phasellus condimentum est eu congue bibendum. Maecenas dictum leo elit, vitae tincidunt risus vehicula sit amet. In elementum est et tempus dignissim.
+            <h3>Goodbye</h3>
+            Nulla in dolor sit amet lorem volutpat pretium. Integer quis tempus sem, nec malesuada lacus. In tristique ac leo eget euismod. Maecenas dapibus magna et nisl tincidunt condimentum. Duis vehicula ornare tincidunt. Suspendisse potenti. Quisque eu viverra orci. Phasellus tempor ultricies nisi vitae volutpat. Praesent ullamcorper eu magna in tempus. In sit amet pulvinar nunc. Fusce facilisis lacus massa, quis sollicitudin libero aliquam eu. Donec auctor consequat nisi.
+          </div>
         </div>
         <div class="slide">
-          <div>
+          <div class="title">
             <h2>slide4</h2>
             This is a slide from the carousel lol !
           </div>
           <img src="http://riceoheart.com/images/slider/slider-image-04.jpg">
+          <div>
+            <h3>Hello</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquam augue. Etiam consectetur lorem a euismod imperdiet. Maecenas molestie, nulla commodo lacinia placerat, ipsum metus mollis orci, ac commodo magna magna at quam. Curabitur tempus nisi convallis pharetra tincidunt. Nullam cursus ipsum ante. Phasellus condimentum est eu congue bibendum. Maecenas dictum leo elit, vitae tincidunt risus vehicula sit amet. In elementum est et tempus dignissim.
+            <h3>Goodbye</h3>
+            Nulla in dolor sit amet lorem volutpat pretium. Integer quis tempus sem, nec malesuada lacus. In tristique ac leo eget euismod. Maecenas dapibus magna et nisl tincidunt condimentum. Duis vehicula ornare tincidunt. Suspendisse potenti. Quisque eu viverra orci. Phasellus tempor ultricies nisi vitae volutpat. Praesent ullamcorper eu magna in tempus. In sit amet pulvinar nunc. Fusce facilisis lacus massa, quis sollicitudin libero aliquam eu. Donec auctor consequat nisi.
+          </div>
         </div>
         <div class="slide">
-          <div>
+          <div class="title">
             <h2>slide5</h2>
             This is a slide from the carousel lol !
           </div>
           <img src="http://riceoheart.com/images/slider/slider-image-05.jpg">
+          <div>
+            <h3>Hello</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquam augue. Etiam consectetur lorem a euismod imperdiet. Maecenas molestie, nulla commodo lacinia placerat, ipsum metus mollis orci, ac commodo magna magna at quam. Curabitur tempus nisi convallis pharetra tincidunt. Nullam cursus ipsum ante. Phasellus condimentum est eu congue bibendum. Maecenas dictum leo elit, vitae tincidunt risus vehicula sit amet. In elementum est et tempus dignissim.
+            <h3>Goodbye</h3>
+            Nulla in dolor sit amet lorem volutpat pretium. Integer quis tempus sem, nec malesuada lacus. In tristique ac leo eget euismod. Maecenas dapibus magna et nisl tincidunt condimentum. Duis vehicula ornare tincidunt. Suspendisse potenti. Quisque eu viverra orci. Phasellus tempor ultricies nisi vitae volutpat. Praesent ullamcorper eu magna in tempus. In sit amet pulvinar nunc. Fusce facilisis lacus massa, quis sollicitudin libero aliquam eu. Donec auctor consequat nisi.
+          </div>
         </div>
         <div class="slide">
-          <div>
+          <div class="title">
             <h2>slide6</h2>
             This is a slide from the carousel lol !
           </div>
           <img src="http://www.okeefes.org/Flowers/Limulus_australis/waties_island_sc_fri3.jpg">
+          <div>
+            <h3>Hello</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquam augue. Etiam consectetur lorem a euismod imperdiet. Maecenas molestie, nulla commodo lacinia placerat, ipsum metus mollis orci, ac commodo magna magna at quam. Curabitur tempus nisi convallis pharetra tincidunt. Nullam cursus ipsum ante. Phasellus condimentum est eu congue bibendum. Maecenas dictum leo elit, vitae tincidunt risus vehicula sit amet. In elementum est et tempus dignissim.
+            <h3>Goodbye</h3>
+            Nulla in dolor sit amet lorem volutpat pretium. Integer quis tempus sem, nec malesuada lacus. In tristique ac leo eget euismod. Maecenas dapibus magna et nisl tincidunt condimentum. Duis vehicula ornare tincidunt. Suspendisse potenti. Quisque eu viverra orci. Phasellus tempor ultricies nisi vitae volutpat. Praesent ullamcorper eu magna in tempus. In sit amet pulvinar nunc. Fusce facilisis lacus massa, quis sollicitudin libero aliquam eu. Donec auctor consequat nisi.
+          </div>
         </div>
         <div class="slide">
-          <div><h2>slide7</h2></div>
+          <div class="title"><h2>slide7</h2></div>
           <img src="http://3.bp.blogspot.com/-0X1xgumKgbA/Uo0bM_PsuaI/AAAAAAAABdg/KB8JjxyNctM/s1600/banner%2Bquick.jpg">
         </div>
         <div class="slide">
-          <div>
+          <div class="title">
             <h2>slide8</h2>
             This is a slide from the carousel lol !
           </div>
           <img src="http://www.gallagherhyde.co.uk/wp-content/themes/haywoods/images/about-us.jpg">
+          <div>
+            <h3>Hello</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet aliquam augue. Etiam consectetur lorem a euismod imperdiet. Maecenas molestie, nulla commodo lacinia placerat, ipsum metus mollis orci, ac commodo magna magna at quam. Curabitur tempus nisi convallis pharetra tincidunt. Nullam cursus ipsum ante. Phasellus condimentum est eu congue bibendum. Maecenas dictum leo elit, vitae tincidunt risus vehicula sit amet. In elementum est et tempus dignissim.
+            <h3>Goodbye</h3>
+            Nulla in dolor sit amet lorem volutpat pretium. Integer quis tempus sem, nec malesuada lacus. In tristique ac leo eget euismod. Maecenas dapibus magna et nisl tincidunt condimentum. Duis vehicula ornare tincidunt. Suspendisse potenti. Quisque eu viverra orci. Phasellus tempor ultricies nisi vitae volutpat. Praesent ullamcorper eu magna in tempus. In sit amet pulvinar nunc. Fusce facilisis lacus massa, quis sollicitudin libero aliquam eu. Donec auctor consequat nisi.
+          </div>
         </div>
+        
       </div>
 
       <div id="leftArrow"></div>
       <div id="rightArrow"></div>
       <div class="sliderContainer">
-        <span class="slider"></span>
-        <span class="slider"></span>
-        <span class="slider"></span>
-        <span class="slider"></span>
-        <span class="slider"></span>
-        <span class="slider"></span>
-        <span class="slider"></span>
-        <span class="slider"></span>
+        <span class="slider" title="Title of slide1"></span>
+        <span class="slider" title="Title of slide2"></span>
+        <span class="slider" title="Title of slide3"></span>
+        <span class="slider" title="Title of slide4"></span>
+        <span class="slider" title="Title of slide5"></span>
+        <span class="slider" title="Title of slide6"></span>
+        <span class="slider" title="Title of slide7"></span>
+        <span class="slider" title="Title of slide8"></span>
       </div>
     </div>
     <script type="text/javascript">
@@ -174,10 +237,21 @@
         var left = $("#leftArrow");
         var right = $("#rightArrow");
         var sliders = $(".slider");
-        $("#carousel").carousel(0,{
+        var carousel = $("#carousel");
+        carousel.carousel(0,{
           left:left,
           right:right,
           sliders:sliders
+        });
+
+        $(document).keydown(function(e){
+           var code = e.keyCode || e.which;
+           if(code == 39) { 
+            carousel.get(0).slideLeft();
+           }
+           else if(code == 37){
+            carousel.get(0).slideRight();
+           }
         });
       });
     </script>
