@@ -15,11 +15,11 @@
     <div class="wrapper">
       <header>
         <nav class="tabs">
-          <a class="tab selected" href="#">
+          <a class="tab selected" href="index.php">
             <img />
             <b>Bonsovi Polqni</b>
           </a>
-          <a class="tab" href="#">
+          <a class="tab" href="club.php">
             <img />
             <b>Bilkis</b>
           </a>
