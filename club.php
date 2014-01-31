@@ -6,7 +6,7 @@
     <script type="text/javascript" src="js/lightbox-2.6.min.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.js"></script>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="css/carousel.css" media="screen"/>
+    <link rel="stylesheet" href="css hija/carousel.css" media="screen"/>
         <script>
       $(document).ready()
       {

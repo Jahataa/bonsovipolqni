@@ -34,6 +34,22 @@
         innerSlideCounter++;
       });
 
+      var hideArrows = function()
+      {
+        controls.left.show();
+        controls.right.show();
+
+        if(currentSlide == 0)
+        {
+          controls.left.hide();
+        }
+        if(currentSlide == slides.length - 1)
+        {
+          
+          controls.right.hide();
+        }
+      }
+
       carousel.slideLeft = function(noAsignSliding) {
         if(isSliding) return;
         if(currentSlide == slides.length - 1) return false;
@@ -42,6 +58,7 @@
         currentSlide++;
         $(slides[currentSlide]).css("left","0%");
         controls.sliders.highlight(currentSlide);
+        hideArrows();
         return true;
       }
 
@@ -53,6 +70,7 @@
         currentSlide--;
         $(slides[currentSlide]).css("left","0%");
         controls.sliders.highlight(currentSlide);
+        hideArrows();
         return true;
       }
 
@@ -103,6 +121,9 @@
       controls.left.click(function(){
         carousel.slideRight();
       });
+
+
+      hideArrows();
 
     });
 

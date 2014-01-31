@@ -1,0 +1,202 @@
+﻿*{
+    border: none;
+    }
+body, ul, ol, li, form, fieldset, legend
+{
+    margin: 0;
+    padding: 0;
+    }
+ body {
+    background-color: #61705e;
+    height: 100%;
+    }
+ .wrapper {
+    width: 1024px;
+    height: 100%;
+    margin: auto;
+    margin-top: 5px;
+ }
+ .tabs {
+    height: 180px;
+ }
+ .white {
+    width: 1024px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    margin-top: 180px;
+    -moz-box-shadow: 0px -2px 2px 0px #393b37;
+-webkit-box-shadow: 0px -2px 2px 0px #393b37;
+box-shadow: 0px -2px 2px 0px #393b37;}
+ .tabSelected {
+    height: 180px;
+    width: 512px;
+    background-color: white;
+    float: left;
+    border-radius: 5px 5px 0px 0px;
+    position: absolute;
+    -moz-box-shadow: 2px -2px 2px 0px #393b37;
+-webkit-box-shadow: 2px -2px 2px 0px #393b37;
+box-shadow: 2px -2px 2px 0px #393b37;}
+ .tab {
+    height: 180px;
+    width: 512px;
+    float: right;
+    background-color: white;
+    position: inherit;
+    border-radius: 5px 5px 0px 0px;
+    -moz-box-shadow: -2px -2px 2px 0px #393b37;
+-webkit-box-shadow: -2px -2px 2px 0px #393b37;
+box-shadow: -2px -2px 2px 0px #393b37;
+}
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;text-shadow:0 0 3px #d99a02;}
+a:active {text-decoration:none;text-shadow:0 0 3px #d99a02;}
+.BP{
+    font-family: sans-serif;
+    color: #616f28;
+    font-size: 1.25em;
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 75px;
+    list-style-type: none;
+}
+.tabSelected:hover{text-decoration:none;text-shadow:0 0 3px #4c5232;}
+.tab:hover{text-decoration:none;text-shadow:0 0 3px #4c5232;}
+.tabs .tabSelected img {
+    float: left;
+    margin-top: 35px;
+    margin-left: 70px;
+    position: absolute;
+}
+.tabs .tab img {
+    float: right;
+    margin-top: 35px;
+    margin-left: 172px;
+    position: absolute;
+}
+.sto {
+    font-family: sans-serif;
+    color: #616f28;
+    font-size: 1.25em;
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 167px;
+    list-style-type: none;
+}
+.menu {
+    width: 1024px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+}
+ul{list-style-type: none;}
+.menu ul {
+    width: 1024px;
+    height: 80px;
+    background-color: white;
+    border-top: 2px solid #d99a02;
+    margin-top: 20px;
+}
+.menu li {
+    width: 100px;
+    height: 40px;
+    border-left: 2px solid #d99a02;
+    float: left;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.menu li a {
+    font-family: sans-serif;
+    color: #d99a02;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 22px;
+    margin-top: 10px;
+    float: left;
+}
+article {
+    background-image: url('../images/pines-font.png');
+    background-color: #b8ca6d;
+    width: 1024px;
+   
+    background-repeat: no-repeat;
+    float: left;
+    position: relative;
+    margin-top: 80px;
+}
+h1 {
+    position: relative;
+    margin-top: 80px;
+    margin-left: 100px;
+    font-family: sans-serif;
+    color: #616f28;
+}
+.contentArea {
+    width: 904px;
+    height: 100%;
+    margin: auto;
+}
+footer {
+    width: 1024px;
+    height: 40px;
+    background-color: #b8ca6d;
+    border-top: 2px solid #d99a02;
+    float: left;
+    position: inherit;
+}
+footer ul li {
+    float: left;
+    margin-left: 50px;
+    margin-top: 5px;
+    font-family: sans-serif;
+    color: white;
+}
+footer ul li a {
+    width: 150px;
+    float: left;
+    margin-left: 30px;
+    font-family: sans-serif;
+    color: #d99a02;
+    list-style-type: none;
+    border-left: 2px solid #d99a02;
+    text-align: center;
+}
+/* google map*/
+.map {
+    float:left;
+    margin-right:20px;
+}
+/*галерия */
+table th{
+    color:#fff;
+    font-size: 24px;
+    text-align:center;
+}
+
+
+td a img{
+    border: 3px solid #fff ;
+    color:#fff;
+    width: 273px;
+    height: 273px;
+
+}
+
+
+td a:hover img {
+    border:3px solid #70b8ff;
+}
+/* facebook */
+.fb {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 22px;
+    margin-top: 10px;
+    float: left;
+}
